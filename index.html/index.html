@@ -1,0 +1,1224 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios TIC para docentes | Ecuador</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="flex min-h-screen flex-col bg-slate-50 text-slate-800">
+  <div class="h-1.5 bg-[linear-gradient(to_right,#075b96_0%,#075b96_68%,#34a9d6_68%,#34a9d6_100%)]" aria-hidden="true"></div>
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
+      <div class="flex items-center gap-3">
+        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#075b96] text-amber-300 shadow-sm">
+          <i class="fa-solid fa-graduation-cap text-xl" aria-hidden="true"></i>
+        </span>
+        <div>
+          <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#a66a00]">Servicio para docentes</p>
+          <h1 class="text-base font-extrabold leading-tight text-[#075b96] sm:text-lg">Mesa de Servicios TIC</h1>
+        </div>
+      </div>
+      <button onclick="abrirModal()" class="inline-flex items-center justify-center gap-2 rounded-lg bg-[#075b96] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#087bb5] focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2">
+        <i class="fa-solid fa-headset" aria-hidden="true"></i> Pedir soporte
+      </button>
+    </div>
+  </header>
+
+  <main id="public-view" class="mx-auto w-full max-w-7xl flex-1 px-4 py-8 sm:px-6 sm:py-12">
+    <section class="relative isolate overflow-hidden rounded-3xl bg-[#075b96] shadow-xl">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_85%_15%,rgba(245,196,0,0.18),transparent_30%),linear-gradient(120deg,#075b96,#087bb5)]" aria-hidden="true"></div>
+      <div class="grid items-center gap-8 px-6 py-10 sm:px-10 sm:py-14 lg:grid-cols-[1.25fr_0.75fr] lg:px-14">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-amber-200">
+            <i class="fa-solid fa-sun" aria-hidden="true"></i> Ministerio de Educación, Deporte y Cultura
+          </span>
+          <h2 class="mt-5 text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">Estamos para apoyar tu labor docente</h2>
+          <p class="mt-5 max-w-xl text-base leading-7 text-blue-100 sm:text-lg">Un canal sencillo para resolver tus requerimientos tecnológicos y ayudarte a seguir conectando con tu comunidad educativa.</p>
+          <button onclick="abrirModal()" class="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-amber-400 px-5 py-3 font-bold text-[#075b96] shadow-lg transition hover:bg-amber-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#075b96] sm:w-auto">
+            <i class="fa-solid fa-ticket" aria-hidden="true"></i> Crear una solicitud
+            <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+          </button>
+          <p class="mt-4 flex items-center gap-2 text-sm text-blue-100">
+            <i class="fa-solid fa-laptop" aria-hidden="true"></i> Atención para correo institucional, AMIE, SIEE y otros servicios TIC.
+          </p>
+        </div>
+        <div class="hidden lg:block" aria-hidden="true">
+          <div class="relative mx-auto flex h-64 w-64 items-center justify-center rounded-full border border-white/20 bg-white/5">
+            <div class="absolute inset-5 rounded-full border border-dashed border-amber-300/50"></div>
+            <div class="flex h-36 w-36 items-center justify-center rounded-[2rem] bg-amber-400 text-[#075b96] shadow-2xl rotate-3">
+              <i class="fa-solid fa-book-open text-6xl"></i>
+            </div>
+            <span class="absolute right-2 top-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#075b96] shadow-lg"><i class="fa-solid fa-futbol text-2xl"></i></span>
+            <span class="absolute bottom-5 left-0 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#34a9d6] text-white shadow-lg"><i class="fa-solid fa-masks-theater text-2xl"></i></span>
+            <span class="absolute bottom-1 right-7 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-emerald-700 shadow-lg"><i class="fa-solid fa-lightbulb text-xl"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="h-1.5 bg-[linear-gradient(to_right,#075b96_0%,#075b96_68%,#34a9d6_68%,#34a9d6_100%)]" aria-hidden="true"></div>
+    </section>
+
+    <section class="py-10 sm:py-12" aria-labelledby="servicios-title">
+      <div class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#a66a00]">A tu servicio</p>
+          <h3 id="servicios-title" class="mt-1 text-2xl font-extrabold text-[#075b96]">¿En qué podemos ayudarte?</h3>
+        </div>
+        <p class="max-w-lg text-sm leading-6 text-slate-600">Selecciona el tema de tu requerimiento y nuestro equipo te orientará.</p>
+      </div>
+      <div class="grid gap-4 md:grid-cols-3">
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-100 text-amber-800"><i class="fa-solid fa-envelope text-lg" aria-hidden="true"></i></span>
+          <h4 class="mt-4 font-bold text-[#075b96]">Correo institucional</h4>
+          <p class="mt-1 text-sm leading-6 text-slate-600">Acceso, recuperación y novedades de tu cuenta institucional.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100 text-blue-800"><i class="fa-solid fa-school text-lg" aria-hidden="true"></i></span>
+          <h4 class="mt-4 font-bold text-[#075b96]">AMIE y SIEE</h4>
+          <p class="mt-1 text-sm leading-6 text-slate-600">Acompañamiento con plataformas y herramientas educativas.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-100 text-sky-700"><i class="fa-solid fa-computer text-lg" aria-hidden="true"></i></span>
+          <h4 class="mt-4 font-bold text-[#075b96]">Soporte tecnológico</h4>
+          <p class="mt-1 text-sm leading-6 text-slate-600">Cuéntanos qué necesitas y te ayudaremos a encontrar una solución.</p>
+        </article>
+      </div>
+      <div class="mt-8 flex flex-col gap-3 border-t border-slate-200 pt-5 sm:flex-row sm:items-center sm:justify-between">
+        <p class="flex items-center gap-2 text-sm text-slate-600"><i class="fa-solid fa-heart text-[#075b96]" aria-hidden="true"></i> Gracias por tu compromiso con la educación del Ecuador.</p>
+        <button onclick="abrirLogin()" class="self-start text-sm font-medium text-[#075b96] underline underline-offset-4 hover:text-[#a66a00] sm:self-auto">Conectarse como administrador</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Métricas Rápidas -->
+  <section id="admin-view" class="hidden flex-1 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4">
+      <div>
+        <p class="text-xs font-bold uppercase text-indigo-700">Panel privado</p>
+        <h2 id="admin-page-title" class="text-xl font-bold text-slate-900">Inicio</h2>
+        <p id="admin-page-description" class="text-sm text-slate-500">Estadísticas y solicitudes que requieren atención.</p>
+        <p id="admin-name" class="text-sm text-slate-500"></p>
+      </div>
+      <button id="cerrar-sesion" class="border border-slate-300 px-3 py-2 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
+        <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i> Cerrar sesión
+      </button>
+    </div>
+    <p id="dashboard-status" class="mb-4 text-sm text-slate-600" role="status"></p>
+    <div class="grid min-w-0 gap-6 lg:grid-cols-[230px_minmax(0,1fr)]">
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <nav aria-label="Secciones de administración" class="flex gap-2 overflow-x-auto rounded-xl border border-slate-200 bg-white p-2 shadow-sm lg:flex-col lg:overflow-visible">
+          <button type="button" data-admin-section="admin-home" aria-current="page" class="flex shrink-0 items-center gap-3 rounded-lg bg-indigo-700 px-3 py-3 text-left text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 lg:w-full">
+            <i class="fa-solid fa-house w-5 text-center" aria-hidden="true"></i><span>Inicio</span>
+          </button>
+          <button type="button" data-admin-section="admin-tickets" class="flex shrink-0 items-center gap-3 rounded-lg px-3 py-3 text-left text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 lg:w-full">
+            <i class="fa-solid fa-ticket w-5 text-center" aria-hidden="true"></i><span>Gestión de tickets</span>
+          </button>
+          <button type="button" data-admin-section="admin-users" class="flex shrink-0 items-center gap-3 rounded-lg px-3 py-3 text-left text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 lg:w-full">
+            <i class="fa-solid fa-users w-5 text-center" aria-hidden="true"></i><span>Usuarios y técnicos</span>
+          </button>
+          <button type="button" data-admin-section="admin-config" class="flex shrink-0 items-center gap-3 rounded-lg px-3 py-3 text-left text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 lg:w-full">
+            <i class="fa-solid fa-sliders w-5 text-center" aria-hidden="true"></i><span>Configuración</span>
+          </button>
+        </nav>
+      </aside>
+      <div class="min-w-0">
+    <section id="admin-home">
+    <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-slate-500">Estadísticas y solicitudes</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex items-center justify-between">
+        <div>
+          <p class="text-xs text-slate-500 font-bold uppercase">Total Tickets</p>
+          <h2 id="total-tickets" class="text-2xl font-bold text-slate-800">0</h2>
+        </div>
+        <div class="p-3 bg-blue-50 text-blue-600 rounded-lg"><i class="fa-solid fa-inbox text-xl"></i></div>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex items-center justify-between">
+        <div>
+          <p class="text-xs text-slate-500 font-bold uppercase">Pendientes</p>
+          <h2 id="total-pendientes" class="text-2xl font-bold text-amber-600">0</h2>
+        </div>
+        <div class="p-3 bg-amber-50 text-amber-600 rounded-lg"><i class="fa-solid fa-clock text-xl"></i></div>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex items-center justify-between">
+        <div>
+          <p class="text-xs text-slate-500 font-bold uppercase">Atendidos</p>
+          <h2 id="total-atendidos" class="text-2xl font-bold text-emerald-600">0</h2>
+        </div>
+        <div class="p-3 bg-emerald-50 text-emerald-600 rounded-lg"><i class="fa-solid fa-check-circle text-xl"></i></div>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex items-center justify-between">
+        <div>
+          <p class="text-xs text-slate-500 font-bold uppercase">Sin Asignar</p>
+          <h2 id="total-sin-asignar" class="text-2xl font-bold text-rose-600">0</h2>
+        </div>
+        <div class="p-3 bg-rose-50 text-rose-600 rounded-lg"><i class="fa-solid fa-user-xmark text-xl"></i></div>
+      </div>
+    </div>
+    </section>
+
+    <section id="admin-tickets" class="hidden">
+    <div class="mb-3">
+      <h3 class="text-lg font-bold text-slate-900">Gestión de tickets</h3>
+      <p class="text-sm text-slate-500">Consulta todas las solicitudes, incluidas las atendidas. Resolver un ticket lo conserva en el historial.</p>
+    </div>
+    <div class="mb-4 flex flex-wrap gap-2" role="group" aria-label="Filtrar tickets por estado">
+      <button type="button" data-ticket-status="" aria-pressed="true" class="rounded-full bg-indigo-700 px-4 py-2 text-sm font-semibold text-white">Todos <span id="tickets-count-all">0</span></button>
+      <button type="button" data-ticket-status="Pendiente" aria-pressed="false" class="rounded-full border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-800 hover:bg-amber-50">Pendientes <span id="tickets-count-pending">0</span></button>
+      <button type="button" data-ticket-status="Atendido" aria-pressed="false" class="rounded-full border border-emerald-300 bg-white px-4 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-50">Atendidos <span id="tickets-count-attended">0</span></button>
+    </div>
+    <!-- Filtros de búsqueda -->
+    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 mb-6 flex flex-wrap gap-4 items-center justify-between">
+      <div class="flex flex-wrap gap-3 items-center flex-1">
+        <input type="text" id="filtro-texto" placeholder="Buscar por código, correo o AMIE..." 
+ class="border border-slate-300 rounded-lg px-3 py-2 text-sm w-72 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        
+        <select id="filtro-categoria" class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <option value="" />Todos los requerimientos
+          <option value="Soporte técnico" />Soporte técnico
+          <option value="Reseteo de Correo" />Reseteo de Correo
+          <option value="Actualización de AMIE" />Actualización de AMIE
+          <option value="Desbloqueo de cuenta por Spam" />Desbloqueo de cuenta por Spam
+          <option value="Cambio de Rol en el SIEE" />Cambio de Rol en el SIEE
+          <option value="Desbloqueo por cuenta comprometida" />Desbloqueo por cuenta comprometida
+        </select>
+
+      </div>
+
+      <button id="exportar-csv" class="text-slate-600 hover:text-slate-900 border border-slate-300 px-3 py-2 rounded-lg text-sm flex items-center gap-2">
+        <i class="fa-solid fa-file-export"></i> Exportar BD
+      </button>
+    </div>
+
+    <!-- Tabla de Tickets -->
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[1100px] table-fixed text-left text-sm text-slate-600">
+          <colgroup>
+            <col class="w-[12%]">
+            <col class="w-[20%]">
+            <col class="w-[34%]">
+            <col class="w-[15%]">
+            <col class="w-[11%]">
+            <col class="w-[8%]">
+          </colgroup>
+          <thead class="bg-slate-50 text-slate-700 uppercase font-semibold text-xs border-b border-slate-200">
+            <tr>
+              <th class="px-3 py-3">Código</th>
+              <th class="px-3 py-3">Solicitante / AMIE</th>
+              <th class="px-3 py-3">Requerimiento</th>
+              <th class="px-3 py-3">Asignar Agente</th>
+              <th class="px-3 py-3">Estado</th>
+              <th class="px-3 py-3 text-center">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-tickets" class="divide-y divide-slate-200">
+            <!-- Filas dinámicas -->
+          </tbody>
+        </table>
+      </div>
+      <div id="vacio" class="hidden text-center py-12 text-slate-400">
+        <i class="fa-regular fa-folder-open text-4xl mb-2"></i>
+        <p>No se encontraron tickets con los criterios seleccionados.</p>
+      </div>
+    </div>
+    </section>
+
+    <section id="admin-users" class="hidden">
+      <div class="mb-3 flex items-center justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Usuarios y técnicos</h3>
+          <p class="text-sm text-slate-500">Cuentas y agentes registrados en el sistema</p>
+        </div>
+      </div>
+      <div class="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+        <table class="w-full text-left text-sm text-slate-600">
+          <thead class="bg-slate-50 text-xs uppercase font-semibold text-slate-700">
+            <tr><th class="px-5 py-3">Nombre</th><th class="px-5 py-3">Perfil</th><th class="px-5 py-3">Estado</th><th class="px-5 py-3 text-center">Acciones</th></tr>
+          </thead>
+          <tbody id="tabla-personal" class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+      <form id="staff-invite-form" class="mt-4 grid gap-3 sm:grid-cols-[1fr_1fr_1fr_1fr_auto] sm:items-end">
+        <label class="block text-sm font-medium text-slate-700">Nombres
+          <input id="staff-first-name" type="text" required maxlength="60" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Apellidos
+          <input id="staff-last-name" type="text" required maxlength="60" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Correo institucional
+          <input id="staff-email" type="email" required maxlength="254" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Contraseña inicial
+          <span class="relative mt-1 block">
+            <input id="staff-password" type="password" required minlength="8" autocomplete="new-password" class="w-full border border-slate-300 rounded-lg px-3 py-2.5 pr-11 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <button id="toggle-staff-password" type="button" class="absolute inset-y-0 right-0 flex w-11 items-center justify-center text-slate-500 hover:text-indigo-700" aria-label="Mostrar contraseña" title="Mostrar contraseña"><i class="fa-regular fa-eye" aria-hidden="true"></i></button>
+          </span>
+        </label>
+        <button id="staff-invite-submit" type="submit" class="bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-2.5 rounded-lg font-semibold disabled:opacity-50">Agregar personal</button>
+      </form>
+      <p class="mt-2 text-xs text-slate-500">Entrega la contraseña inicial por un canal seguro.</p>
+      <p id="staff-invite-status" class="mt-3 text-sm text-slate-600" role="status"></p>
+    </section>
+    <section id="admin-config" class="hidden">
+      <div class="mb-4">
+        <h3 class="text-lg font-bold text-slate-900">Permitir nuevos administradores</h3>
+        <p class="text-sm text-slate-500">Define cuántas cuentas nuevas podrán registrarse. Cada registro consume un cupo.</p>
+      </div>
+      <form id="admin-signup-settings-form" class="flex flex-wrap items-end gap-3">
+        <label class="block text-sm font-medium text-slate-700">Cupos disponibles
+          <input id="admin-signup-slots" type="number" min="0" max="100" required value="0" class="mt-1 block w-36 border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <button type="submit" class="bg-slate-800 hover:bg-slate-900 text-white px-4 py-2.5 rounded-lg font-semibold">Guardar cupos</button>
+        <p id="admin-signup-settings-status" class="text-sm text-slate-600" role="status"></p>
+      </form>
+    <div class="mt-8 border-t border-slate-200 pt-6">
+      <div class="mb-4">
+        <h3 class="text-lg font-bold text-slate-900">Agregar administrador</h3>
+        <p class="text-sm text-slate-500">Se enviará una invitación al correo indicado. Solo un administrador activo puede hacerlo.</p>
+      </div>
+      <form id="admin-invite-form" class="grid gap-3 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+        <label class="block text-sm font-medium text-slate-700">Nombres
+          <input id="admin-invite-first-name" type="text" required maxlength="60" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Apellidos
+          <input id="admin-invite-last-name" type="text" required maxlength="60" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Correo institucional
+          <input id="admin-invite-email" type="email" required maxlength="254" autocomplete="off" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <button id="admin-invite-submit" type="submit" class="bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-2.5 rounded-lg font-semibold disabled:opacity-50">Enviar invitación</button>
+      </form>
+      <p id="admin-invite-status" class="mt-3 text-sm text-slate-600" role="status"></p>
+    </div>
+    </section>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Modal para Crear Nuevo Ticket -->
+  <div id="modalTicket" class="fixed inset-0 bg-slate-900 bg-opacity-50 flex items-start sm:items-center justify-center overflow-y-auto p-3 sm:p-4 hidden z-50" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title">
+    <div class="my-auto bg-white rounded-xl shadow-xl w-full max-w-lg max-h-[calc(100vh-1.5rem)] sm:max-h-[calc(100vh-2rem)] overflow-y-auto animate-fade-in">
+      <div class="sticky top-0 bg-indigo-900 text-white px-4 sm:px-6 py-4 flex justify-between items-center gap-3">
+        <h3 id="ticket-modal-title" class="font-bold text-base sm:text-lg"><i class="fa-solid fa-envelope-open-text mr-2"></i> Nuevo Requerimiento</h3>
+        <button type="button" onclick="cerrarModal()" class="shrink-0 text-indigo-300 hover:text-white text-xl" aria-label="Cerrar formulario">&times;</button>
+      </div>
+      <form id="ticketForm" class="p-4 sm:p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Tipo de Requerimiento *</label>
+          <select id="req-tipo" required class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+            <option value="Soporte técnico" />Soporte técnico
+            <option value="Reseteo de Correo" />Reseteo de Correo
+            <option value="Actualización de AMIE" />Actualización de AMIE
+            <option value="Desbloqueo de cuenta por Spam" />Desbloqueo de cuenta por Spam
+            <option value="Cambio de Rol en el SIEE" />Cambio de Rol en el SIEE
+            <option value="Desbloqueo por cuenta comprometida" />Desbloqueo por cuenta comprometida
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Correo Remitente *</label>
+            <input type="email" id="req-correo" required placeholder="usuario@educacion.gob.ec" 
+ class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Código AMIE (Opcional)</label>
+            <input type="text" id="req-amie" placeholder="Ej: 17H00000" 
+ class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="req-nombres" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Nombres *</label>
+            <input type="text" id="req-nombres" required maxlength="120" autocomplete="given-name" placeholder="Tus nombres"
+ class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+          </div>
+          <div>
+            <label for="req-apellidos" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Apellidos *</label>
+            <input type="text" id="req-apellidos" required maxlength="120" autocomplete="family-name" placeholder="Tus apellidos"
+ class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label for="req-contacto" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Teléfono u otro medio de contacto (opcional)</label>
+          <input type="text" id="req-contacto" maxlength="120" autocomplete="tel" placeholder="Ej.: teléfono o WhatsApp"
+ class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Asunto *</label>
+          <input type="text" id="req-asunto" required placeholder="Breve descripción del problema" 
+ class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+        </div>
+
+        <div class="rounded-lg border border-slate-300 p-3">
+          <label for="req-descripcion" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Detalle del Requerimiento *</label>
+          <textarea id="req-descripcion" rows="3" required placeholder="Cuerpo del correo o mensaje recibido..." 
+                    class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"></textarea>
+          <label for="req-archivo" class="mt-3 flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-indigo-300 bg-indigo-50 px-3 py-3 text-sm text-indigo-800 hover:bg-indigo-100">
+            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-indigo-700"><i class="fa-solid fa-paperclip" aria-hidden="true"></i></span>
+            <span class="min-w-0">
+              <span class="block font-semibold">Adjuntar archivo (opcional)</span>
+              <span id="req-archivo-nombre" class="block truncate text-xs text-slate-600" aria-live="polite">Selecciona un archivo · Máximo 10 MB</span>
+            </span>
+          </label>
+          <input type="file" id="req-archivo" accept=".pdf,.png,.jpg,.jpeg,.webp,.txt,.doc,.docx,.xls,.xlsx" class="sr-only" />
+        </div>
+
+        <div class="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-3">
+          <button type="button" onclick="cerrarModal()" class="w-full sm:w-auto px-4 py-2 border rounded-lg text-slate-600 hover:bg-slate-50 text-sm">Cancelar</button>
+          <button type="submit" class="w-full sm:w-auto px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-semibold">Enviar solicitud</button>
+        </div>
+        <p id="ticket-status" class="text-sm text-rose-700" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="loginModal" class="fixed inset-0 bg-slate-900/60 flex items-center justify-center p-4 hidden z-50" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="bg-white rounded-xl shadow-xl w-full max-w-md p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-xs font-bold uppercase text-indigo-700">Área restringida</p>
+          <h2 id="login-title" class="mt-1 text-xl font-bold text-slate-900">Conectarse como administrador</h2>
+        </div>
+        <button type="button" onclick="cerrarLogin()" class="text-slate-400 hover:text-slate-700 text-xl" aria-label="Cerrar">&times;</button>
+      </div>
+      <form id="login-form" class="mt-5 space-y-4">
+        <label class="block text-sm font-medium text-slate-700">Correo institucional
+          <input id="login-email" type="email" required autocomplete="username" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Contraseña
+          <span class="relative mt-1 block">
+            <input id="login-password" type="password" required autocomplete="current-password" class="w-full border border-slate-300 rounded-lg px-3 py-2.5 pr-11 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <button id="toggle-login-password" type="button" class="absolute inset-y-0 right-0 flex w-11 items-center justify-center text-slate-500 hover:text-indigo-700" aria-label="Mostrar contraseña" title="Mostrar contraseña"><i class="fa-regular fa-eye" aria-hidden="true"></i></button>
+          </span>
+        </label>
+        <p id="login-status" class="text-sm text-rose-700" role="status"></p>
+        <button type="submit" class="w-full bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-2.5 rounded-lg font-semibold">Iniciar sesión</button>
+        <button id="show-register" type="button" class="w-full text-sm text-indigo-700 hover:text-indigo-900 underline underline-offset-4">Registrarse como administrador</button>
+      </form>
+      <form id="register-form" class="mt-5 hidden space-y-4">
+        <label class="block text-sm font-medium text-slate-700">Nombres
+          <input id="register-first-name" type="text" required maxlength="60" autocomplete="given-name" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Apellidos
+          <input id="register-last-name" type="text" required maxlength="60" autocomplete="family-name" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Correo institucional
+          <input id="register-email" type="email" required maxlength="254" autocomplete="email" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </label>
+        <label class="block text-sm font-medium text-slate-700">Contraseña
+          <span class="relative mt-1 block">
+            <input id="register-password" type="password" required minlength="8" autocomplete="new-password" class="w-full border border-slate-300 rounded-lg px-3 py-2.5 pr-11 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <button id="toggle-register-password" type="button" class="absolute inset-y-0 right-0 flex w-11 items-center justify-center text-slate-500 hover:text-indigo-700" aria-label="Mostrar contraseña" title="Mostrar contraseña"><i class="fa-regular fa-eye" aria-hidden="true"></i></button>
+          </span>
+        </label>
+        <p id="register-status" class="text-sm text-slate-600" role="status"></p>
+        <button type="submit" class="w-full bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-2.5 rounded-lg font-semibold">Crear administrador</button>
+        <button id="back-to-login" type="button" class="w-full text-sm text-slate-600 hover:text-slate-900">Volver a iniciar sesión</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="ticketSuccess" class="fixed inset-0 bg-slate-900/60 flex items-center justify-center p-4 hidden z-50" role="dialog" aria-modal="true" aria-labelledby="ticket-success-title">
+    <div class="bg-white rounded-xl shadow-xl w-full max-w-md p-6 text-center">
+      <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-700"><i class="fa-solid fa-check"></i></div>
+      <h2 id="ticket-success-title" class="mt-4 text-xl font-bold text-slate-900">Solicitud recibida</h2>
+      <p class="mt-2 text-sm text-slate-600">Guarda este código para consultar con soporte:</p>
+      <p id="ticket-success-code" class="mt-2 font-mono font-bold text-indigo-700"></p>
+      <button id="ticket-success-close" class="mt-5 bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-2 rounded-lg font-semibold">Listo</button>
+    </div>
+  </div>
+
+  <script type="module">
+const SUPABASE_URL = "";
+const SUPABASE_ANON_KEY = "";
+
+const demoMode = !SUPABASE_URL && !SUPABASE_ANON_KEY;
+const attachmentBucket = "ticket-attachments";
+const attachmentTypes = new Map([
+  ["pdf", "application/pdf"],
+  ["png", "image/png"],
+  ["jpg", "image/jpeg"],
+  ["jpeg", "image/jpeg"],
+  ["webp", "image/webp"],
+  ["txt", "text/plain"],
+  ["doc", "application/msword"],
+  ["docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
+  ["xls", "application/vnd.ms-excel"],
+  ["xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]
+]);
+const supabase = SUPABASE_URL && SUPABASE_ANON_KEY
+  ? (await import("https://esm.sh/@supabase/supabase-js@2")).createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+  : null;
+const ticketsTable = document.getElementById("tabla-tickets");
+const staffTable = document.getElementById("tabla-personal");
+let tickets = [];
+let staff = [];
+let ticketStatusFilter = "";
+let demoAdmins = [];
+let demoSignupSlots = 0;
+let activeDemoAdmin = null;
+const demoStaff = [
+  { id: "demo-agent-1", full_name: "Agente de prueba 1", role: "service", active: true },
+  { id: "demo-agent-2", full_name: "Agente de prueba 2", role: "service", active: true }
+];
+let demoTickets = [
+  {
+    id: "demo-ticket-1",
+    codigo: "TK-DEMO-0001",
+    tipo: "Reseteo de Correo",
+    correo: "solicitante1@example.com",
+    amie: "17H00001",
+    nombre: "Solicitante de prueba",
+    asunto: "Ejemplo: recuperar acceso al correo",
+    descripcion: "Ticket ficticio para probar asignación y cambio de estado.",
+    agente_id: "demo-agent-1",
+    estado: "Pendiente",
+    created_at: new Date().toISOString()
+  },
+  {
+    id: "demo-ticket-2",
+    codigo: "TK-DEMO-0002",
+    tipo: "Soporte técnico",
+    correo: "solicitante2@example.com",
+    amie: null,
+    nombre: "Institución de prueba",
+    asunto: "Ejemplo: revisar un equipo",
+    descripcion: "Segundo ticket ficticio para probar la tabla del administrador.",
+    agente_id: null,
+    estado: "Atendido",
+    created_at: new Date().toISOString()
+  }
+];
+
+function byId(id) {
+  return document.getElementById(id);
+}
+
+function escapeHtml(value = "") {
+  return String(value).replace(/[&<>"']/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[character]);
+}
+
+function setLoginStatus(message, isError = true) {
+  const status = byId("login-status");
+  status.textContent = message;
+  status.className = `text-sm ${isError ? "text-rose-700" : "text-emerald-700"}`;
+}
+
+function showLoginAfterRegistration(email, message) {
+  byId("register-form").classList.add("hidden");
+  byId("login-form").classList.remove("hidden");
+  byId("login-email").value = email;
+  byId("login-password").value = "";
+  setLoginStatus(message, false);
+}
+
+function attachPasswordToggle(inputId, buttonId) {
+  const input = byId(inputId);
+  const button = byId(buttonId);
+  const icon = button.querySelector("i");
+
+  button.addEventListener("click", () => {
+    const showing = input.type === "password";
+    input.type = showing ? "text" : "password";
+    button.setAttribute("aria-label", showing ? "Ocultar contraseña" : "Mostrar contraseña");
+    button.title = showing ? "Ocultar contraseña" : "Mostrar contraseña";
+    icon.classList.toggle("fa-eye", !showing);
+    icon.classList.toggle("fa-eye-slash", showing);
+  });
+}
+
+attachPasswordToggle("login-password", "toggle-login-password");
+attachPasswordToggle("register-password", "toggle-register-password");
+attachPasswordToggle("staff-password", "toggle-staff-password");
+
+byId("req-archivo").addEventListener("change", event => {
+  const file = event.currentTarget.files[0];
+  byId("req-archivo-nombre").textContent = file
+    ? `${file.name} · ${(file.size / (1024 * 1024)).toFixed(2)} MB`
+    : "Selecciona un archivo · Máximo 10 MB";
+});
+
+function showPublicView() {
+  byId("public-view").classList.remove("hidden");
+  byId("admin-view").classList.add("hidden");
+}
+
+function showAdminSection(sectionId) {
+  const sections = {
+    "admin-home": ["Inicio", "Estadísticas y solicitudes que requieren atención."],
+    "admin-tickets": ["Gestión de tickets", "Consulta, asigna y revisa todas las solicitudes."],
+    "admin-users": ["Usuarios y técnicos", "Administra las cuentas y el estado del personal."],
+    "admin-config": ["Configuración", "Gestiona los cupos y las invitaciones de administradores."]
+  };
+  const section = sections[sectionId];
+  if (!section) return;
+
+  for (const id of ["admin-home", "admin-tickets", "admin-users", "admin-config"]) {
+    byId(id).classList.toggle("hidden", id !== sectionId);
+  }
+  byId("admin-page-title").textContent = section[0];
+  byId("admin-page-description").textContent = section[1];
+
+  document.querySelectorAll("[data-admin-section]").forEach(button => {
+    const active = button.dataset.adminSection === sectionId;
+    button.className = `flex shrink-0 items-center gap-3 rounded-lg px-3 py-3 text-left text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 lg:w-full ${
+      active ? "bg-indigo-700 text-white" : "text-slate-700 hover:bg-indigo-50 hover:text-indigo-700"
+    }`;
+    if (active) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
+  });
+}
+
+document.querySelectorAll("[data-admin-section]").forEach(button => {
+  button.addEventListener("click", () => showAdminSection(button.dataset.adminSection));
+});
+
+window.abrirModal = () => byId("modalTicket").classList.remove("hidden");
+window.cerrarModal = () => byId("modalTicket").classList.add("hidden");
+window.abrirLogin = () => {
+  byId("login-form").classList.remove("hidden");
+  byId("register-form").classList.add("hidden");
+  byId("loginModal").classList.remove("hidden");
+  setLoginStatus(supabase ? "" : "Falta completar la configuración de Supabase.", false);
+};
+window.cerrarLogin = () => byId("loginModal").classList.add("hidden");
+
+byId("show-register").addEventListener("click", () => {
+  byId("login-form").classList.add("hidden");
+  byId("register-form").classList.remove("hidden");
+  byId("register-status").textContent = demoMode
+    ? ""
+    : "El registro solo se acepta si es la primera cuenta admin o hay cupos habilitados.";
+});
+
+byId("back-to-login").addEventListener("click", () => {
+  byId("register-form").classList.add("hidden");
+  byId("login-form").classList.remove("hidden");
+});
+
+function getTicketFormValues() {
+  return {
+    codigo: `TK-${new Date().getFullYear()}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`,
+    tipo: byId("req-tipo").value,
+    correo: byId("req-correo").value.trim(),
+    amie: byId("req-amie").value.trim() || null,
+    nombre: `${byId("req-nombres").value.trim()} ${byId("req-apellidos").value.trim()}`,
+    contacto: byId("req-contacto").value.trim() || null,
+    asunto: byId("req-asunto").value.trim(),
+    descripcion: byId("req-descripcion").value.trim()
+  };
+}
+
+byId("ticketForm").addEventListener("submit", async event => {
+  event.preventDefault();
+  const submitButton = event.currentTarget.querySelector('[type="submit"]');
+  const status = byId("ticket-status");
+  status.textContent = "";
+
+  const file = byId("req-archivo").files[0] || null;
+  const extension = file?.name.split(".").pop().toLowerCase();
+  if (file && file.size > 10 * 1024 * 1024) {
+    status.textContent = "El archivo no puede superar los 10 MB.";
+    return;
+  }
+  if (file && !attachmentTypes.has(extension)) {
+    status.textContent = "El formato del archivo no está permitido. Adjunta PDF, imagen, texto o documento de Office.";
+    return;
+  }
+  if (file && demoMode) {
+    status.textContent = "Los archivos adjuntos requieren la conexión a Supabase.";
+    return;
+  }
+
+  const request = getTicketFormValues();
+  if (file) {
+    request.archivo_path = `${request.codigo}/${crypto.randomUUID()}.${extension}`;
+    request.archivo_nombre = file.name;
+  }
+  let error = null;
+
+  if (!demoMode) {
+    if (!supabase) {
+      status.textContent = "Falta completar la configuración de Supabase.";
+      return;
+    }
+    submitButton.disabled = true;
+    if (file) {
+      status.textContent = "Subiendo archivo...";
+      const { error: uploadError } = await supabase.storage
+        .from(attachmentBucket)
+        .upload(request.archivo_path, file, { contentType: attachmentTypes.get(extension), upsert: false });
+      if (uploadError) {
+        status.textContent = "No se pudo subir el archivo. Verifica el formato e inténtalo de nuevo.";
+        submitButton.disabled = false;
+        return;
+      }
+    }
+    status.textContent = "Enviando solicitud...";
+    submitButton.textContent = "Enviando...";
+    ({ error } = await supabase.from("tickets").insert(request));
+    submitButton.disabled = false;
+    submitButton.textContent = "Enviar solicitud";
+  } else {
+    demoTickets.unshift({
+      ...request,
+      id: `demo-ticket-${Date.now()}`,
+      agente_id: null,
+      estado: "Pendiente",
+      created_at: new Date().toISOString()
+    });
+    tickets = demoTickets;
+    renderTickets();
+  }
+
+  if (error) {
+    status.textContent = "No se pudo registrar la solicitud. Inténtalo de nuevo.";
+    return;
+  }
+
+  byId("ticketForm").reset();
+  window.cerrarModal();
+  byId("ticket-success-code").textContent = request.codigo;
+  byId("ticketSuccess").classList.remove("hidden");
+});
+
+function renderStaff() {
+  staffTable.innerHTML = staff.map(person => `
+    <tr>
+      <td class="px-5 py-3 font-medium text-slate-800">${escapeHtml(person.full_name)}</td>
+      <td class="px-5 py-3">${person.role === "admin" ? "Administrador" : "Servicio"}</td>
+      <td class="px-5 py-3">${person.role === "service" ? `
+        <button data-toggle-staff="${escapeHtml(person.id)}" class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ${person.active ? "bg-emerald-100 text-emerald-800 hover:bg-emerald-200" : "bg-slate-100 text-slate-700 hover:bg-slate-200"}" aria-label="${person.active ? "Desactivar" : "Activar"} a ${escapeHtml(person.full_name)}">
+          <i class="fa-solid fa-power-off" aria-hidden="true"></i>${person.active ? "Activo" : "Inactivo"}
+        </button>
+      ` : `<span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full ${person.active ? "bg-emerald-500" : "bg-slate-400"}"></span>${person.active ? "Activo" : "Inactivo"}</span>`}</td>
+      <td class="px-5 py-3 text-center">${person.role === "service" ? `
+        <button data-delete-staff="${escapeHtml(person.id)}" class="text-sm text-rose-700 hover:text-rose-900" aria-label="Eliminar ${escapeHtml(person.full_name)}">Eliminar</button>
+      ` : "Protegido"}</td>
+    </tr>
+  `).join("");
+}
+
+function renderTickets() {
+  const query = byId("filtro-texto").value.trim().toLowerCase();
+  const category = byId("filtro-categoria").value;
+  const filtered = tickets.filter(ticket => {
+    const matchesText = [ticket.codigo, ticket.correo, ticket.contacto, ticket.amie, ticket.nombre, ticket.asunto, ticket.archivo_nombre]
+      .some(value => String(value || "").toLowerCase().includes(query));
+    return matchesText && (!category || ticket.tipo === category) && (!ticketStatusFilter || ticket.estado === ticketStatusFilter);
+  });
+
+  byId("total-tickets").textContent = tickets.length;
+  const pendingCount = tickets.filter(ticket => ticket.estado === "Pendiente").length;
+  const attendedCount = tickets.filter(ticket => ticket.estado === "Atendido").length;
+  byId("total-pendientes").textContent = pendingCount;
+  byId("total-atendidos").textContent = attendedCount;
+  byId("total-sin-asignar").textContent = tickets.filter(ticket => !ticket.agente_id).length;
+  byId("tickets-count-all").textContent = tickets.length;
+  byId("tickets-count-pending").textContent = pendingCount;
+  byId("tickets-count-attended").textContent = attendedCount;
+  document.querySelectorAll("[data-ticket-status]").forEach(button => {
+    const selected = button.dataset.ticketStatus === ticketStatusFilter;
+    const inactiveClass = button.dataset.ticketStatus === "Pendiente"
+      ? "rounded-full border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-800 hover:bg-amber-50"
+      : button.dataset.ticketStatus === "Atendido"
+        ? "rounded-full border border-emerald-300 bg-white px-4 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-50"
+        : "rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50";
+    button.setAttribute("aria-pressed", String(selected));
+    button.className = selected
+      ? "rounded-full bg-indigo-700 px-4 py-2 text-sm font-semibold text-white"
+      : inactiveClass;
+  });
+  byId("vacio").classList.toggle("hidden", filtered.length > 0);
+
+  ticketsTable.innerHTML = filtered.map(ticket => {
+    const agentOptions = staff.filter(person => person.active && person.role !== "admin").map(person => `
+      <option value="${escapeHtml(person.id)}" ${ticket.agente_id === person.id ? "selected" : ""}>${escapeHtml(person.full_name)}</option>
+    `).join("");
+    const statusClass = ticket.estado === "Atendido"
+      ? "bg-emerald-100 text-emerald-800 hover:bg-emerald-200"
+      : "bg-amber-100 text-amber-800 hover:bg-amber-200";
+
+    return `
+      <tr class="hover:bg-slate-50 border-b border-slate-200">
+        <td class="break-all px-3 py-4 align-top font-mono text-xs font-bold text-indigo-700">${escapeHtml(ticket.codigo)}</td>
+        <td class="break-words px-3 py-4 align-top"><div class="font-medium text-slate-800">${escapeHtml(ticket.nombre || "Sin nombre")}</div><div class="break-all text-xs text-slate-500">${escapeHtml(ticket.correo)}</div>${ticket.contacto ? `<div class="break-words text-xs text-slate-500">Contacto: ${escapeHtml(ticket.contacto)}</div>` : ""}${ticket.amie ? `<span class="inline-block bg-slate-200 text-slate-700 text-[10px] px-1.5 py-0.5 rounded mt-1 font-mono">${escapeHtml(ticket.amie)}</span>` : ""}</td>
+        <td class="break-words px-3 py-4 align-top"><span class="inline-block max-w-full break-words rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-800">${escapeHtml(ticket.tipo)}</span><div class="mt-1 break-words text-xs font-semibold text-slate-800">${escapeHtml(ticket.asunto)}</div><p class="mt-1 whitespace-pre-wrap break-words text-xs text-slate-600">${escapeHtml(ticket.descripcion)}</p>${ticket.created_at ? `<p class="mt-1 text-[11px] text-slate-400">Recibido: ${escapeHtml(new Date(ticket.created_at).toLocaleString("es-EC"))}</p>` : ""}${ticket.archivo_path ? `<button type="button" data-download-attachment="${escapeHtml(ticket.id)}" class="mt-1 max-w-full break-all text-left text-xs font-medium text-indigo-700 hover:text-indigo-900"><i class="fa-solid fa-paperclip mr-1" aria-hidden="true"></i>${escapeHtml(ticket.archivo_nombre || "Descargar adjunto")}</button>` : ""}</td>
+        <td class="px-3 py-4 align-top"><select data-agent-ticket="${escapeHtml(ticket.id)}" class="w-full min-w-0 rounded border border-slate-300 px-2 py-1 text-xs"><option value="">Sin asignar</option>${agentOptions}</select></td>
+        <td class="px-3 py-4 align-top"><button data-toggle-ticket="${escapeHtml(ticket.id)}" class="whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold ${statusClass}">${escapeHtml(ticket.estado)}</button></td>
+        <td class="px-3 py-4 text-center align-top"><button data-delete-ticket="${escapeHtml(ticket.id)}" class="text-rose-600 hover:text-rose-800 p-1" title="Eliminar ticket" aria-label="Eliminar ${escapeHtml(ticket.codigo)}"><i class="fa-regular fa-trash-can"></i></button></td>
+      </tr>
+    `;
+  }).join("");
+}
+
+async function loadDashboard() {
+  byId("dashboard-status").textContent = "Cargando tickets y personal...";
+  if (demoMode) {
+    tickets = demoTickets;
+    staff = demoStaff;
+    byId("admin-signup-slots").value = demoSignupSlots;
+    byId("dashboard-status").textContent = "";
+    renderStaff();
+    renderTickets();
+    return;
+  }
+  if (!supabase) {
+    byId("dashboard-status").textContent = "Falta completar la configuración de Supabase.";
+    return;
+  }
+
+  const [ticketsResult, staffResult, settingsResult] = await Promise.all([
+    supabase.from("tickets").select("*").order("created_at", { ascending: false }),
+    supabase.from("profiles").select("id, full_name, role, active").order("full_name"),
+    supabase.from("admin_registration_settings").select("remaining_signups").eq("singleton", true).single()
+  ]);
+
+  if (ticketsResult.error || staffResult.error || settingsResult.error) {
+    byId("dashboard-status").textContent = "No fue posible cargar los datos. Revisa las políticas de Supabase.";
+    return;
+  }
+
+  tickets = ticketsResult.data;
+  staff = staffResult.data;
+  byId("admin-signup-slots").value = settingsResult.data.remaining_signups;
+  byId("dashboard-status").textContent = "";
+  renderStaff();
+  renderTickets();
+}
+
+async function activateAdmin(user) {
+  let profileResult = await supabase
+    .from("profiles")
+    .select("full_name, role, active")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  if (!profileResult.error && !profileResult.data && user.email_confirmed_at) {
+    const { error: registrationError } = await supabase.functions.invoke("claim-admin-registration");
+    if (!registrationError) {
+      profileResult = await supabase
+        .from("profiles")
+        .select("full_name, role, active")
+        .eq("id", user.id)
+        .maybeSingle();
+    }
+  }
+
+  const { data: profile, error } = profileResult;
+
+  if (error || !profile || profile.role !== "admin" || !profile.active) {
+    await supabase.auth.signOut();
+    showPublicView();
+    setLoginStatus("Esta cuenta no tiene permisos de administrador o no quedan cupos de registro.");
+    byId("loginModal").classList.remove("hidden");
+    return false;
+  }
+
+  byId("admin-name").textContent = profile.full_name;
+  byId("public-view").classList.add("hidden");
+  showAdminSection("admin-home");
+  byId("admin-view").classList.remove("hidden");
+  window.cerrarLogin();
+  await loadDashboard();
+  return true;
+}
+
+byId("login-form").addEventListener("submit", async event => {
+  event.preventDefault();
+  if (demoMode) {
+    const email = byId("login-email").value.trim().toLowerCase();
+    const password = byId("login-password").value;
+    activeDemoAdmin = demoAdmins.find(admin => admin.email === email && admin.password === password) || null;
+    if (!activeDemoAdmin) {
+      setLoginStatus(demoAdmins.length
+        ? "Correo o contraseña incorrectos. Usa la cuenta que registraste."
+        : "Todavía no existe una cuenta. Usa Registrarse para crear el primer administrador.");
+      return;
+    }
+    byId("admin-name").textContent = "";
+    byId("public-view").classList.add("hidden");
+    showAdminSection("admin-home");
+    byId("admin-view").classList.remove("hidden");
+    window.cerrarLogin();
+    await loadDashboard();
+    return;
+  }
+  if (!supabase) {
+    setLoginStatus("Falta completar la configuración de Supabase.");
+    return;
+  }
+
+  const button = event.currentTarget.querySelector('[type="submit"]');
+  button.disabled = true;
+  setLoginStatus("Conectando...", false);
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: byId("login-email").value.trim(),
+    password: byId("login-password").value
+  });
+  button.disabled = false;
+
+  if (error) {
+    setLoginStatus("No se pudo iniciar sesión. Verifica tus datos.");
+    return;
+  }
+
+  await activateAdmin(data.user);
+});
+
+byId("register-form").addEventListener("submit", async event => {
+  event.preventDefault();
+  const status = byId("register-status");
+  const firstName = byId("register-first-name").value.trim();
+  const lastName = byId("register-last-name").value.trim();
+  const fullName = `${firstName} ${lastName}`.trim();
+  const email = byId("register-email").value.trim().toLowerCase();
+  const password = byId("register-password").value;
+
+  if (demoMode) {
+    const alreadyRegistered = demoAdmins.some(admin => admin.email === email);
+    if (alreadyRegistered) {
+      status.textContent = "Ese correo ya tiene una cuenta de prueba.";
+      return;
+    }
+    if (demoAdmins.length > 0 && demoSignupSlots < 1) {
+      status.textContent = "El registro está cerrado. Un administrador debe habilitar un cupo.";
+      return;
+    }
+
+    if (demoAdmins.length > 0) demoSignupSlots -= 1;
+    demoAdmins.push({ full_name: fullName, email, password });
+    showLoginAfterRegistration(email, "Registro completado. Inicia sesión para continuar.");
+    return;
+  }
+
+  if (!supabase) {
+    status.textContent = "Falta completar la configuración de Supabase.";
+    return;
+  }
+
+  const button = event.currentTarget.querySelector('[type="submit"]');
+  button.disabled = true;
+  status.textContent = "Creando cuenta...";
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: { data: { first_name: firstName, last_name: lastName, full_name: fullName } }
+  });
+  button.disabled = false;
+
+  if (error) {
+    status.textContent = "No se pudo registrar. Verifica los datos o si quedan cupos disponibles.";
+    return;
+  }
+
+  if (data.session) {
+    const { error: registrationError } = await supabase.functions.invoke("claim-admin-registration");
+    if (registrationError) {
+      status.textContent = "La cuenta se creó, pero no hay un cupo disponible para hacerla administradora.";
+      return;
+    }
+    await supabase.auth.signOut();
+    showLoginAfterRegistration(email, "Registro completado. Inicia sesión para continuar.");
+    return;
+  }
+
+  showLoginAfterRegistration(email, "Cuenta creada. Confirma el correo y luego inicia sesión para activar el acceso de administrador.");
+});
+
+byId("cerrar-sesion").addEventListener("click", async () => {
+  if (supabase) await supabase.auth.signOut();
+  activeDemoAdmin = null;
+  showPublicView();
+});
+
+byId("admin-signup-settings-form").addEventListener("submit", async event => {
+  event.preventDefault();
+  const status = byId("admin-signup-settings-status");
+  const slots = Number(byId("admin-signup-slots").value);
+  if (!Number.isInteger(slots) || slots < 0 || slots > 100) {
+    status.textContent = "Indica entre 0 y 100 cupos.";
+    return;
+  }
+
+  if (demoMode) {
+    demoSignupSlots = slots;
+    status.textContent = `Se habilitaron ${slots} registros de prueba.`;
+    return;
+  }
+  if (!supabase) {
+    status.textContent = "Falta completar la configuración de Supabase.";
+    return;
+  }
+
+  const { error } = await supabase
+    .from("admin_registration_settings")
+    .update({ remaining_signups: slots })
+    .eq("singleton", true);
+  status.textContent = error ? "No se pudieron guardar los cupos." : `Se habilitaron ${slots} registros.`;
+});
+
+byId("admin-invite-form").addEventListener("submit", async event => {
+  event.preventDefault();
+  const status = byId("admin-invite-status");
+  const button = byId("admin-invite-submit");
+
+  if (demoMode || !supabase) {
+    status.textContent = "Las invitaciones requieren conectar Supabase y desplegar la función protegida.";
+    status.className = "mt-3 text-sm text-amber-800";
+    return;
+  }
+
+  button.disabled = true;
+  status.textContent = "Enviando invitación...";
+  status.className = "mt-3 text-sm text-slate-600";
+  const { error } = await supabase.functions.invoke("invite-admin", {
+    body: {
+      first_name: byId("admin-invite-first-name").value.trim(),
+      last_name: byId("admin-invite-last-name").value.trim(),
+      email: byId("admin-invite-email").value.trim()
+    }
+  });
+  button.disabled = false;
+
+  if (error) {
+    status.textContent = "No se pudo enviar la invitación. Verifica tu rol y la configuración de la función.";
+    status.className = "mt-3 text-sm text-rose-700";
+    return;
+  }
+
+  event.currentTarget.reset();
+  status.textContent = "Invitación enviada. La cuenta quedará como administrador al aceptar el correo.";
+  status.className = "mt-3 text-sm text-emerald-700";
+  await loadDashboard();
+});
+
+byId("staff-invite-form").addEventListener("submit", async event => {
+  event.preventDefault();
+  const status = byId("staff-invite-status");
+  const button = byId("staff-invite-submit");
+  const firstName = byId("staff-first-name").value.trim();
+  const lastName = byId("staff-last-name").value.trim();
+  const email = byId("staff-email").value.trim().toLowerCase();
+  const password = byId("staff-password").value;
+
+  if (demoMode) {
+    demoStaff.push({
+      id: `demo-agent-${crypto.randomUUID()}`,
+      full_name: `${firstName} ${lastName}`,
+      role: "service",
+      active: true
+    });
+    event.currentTarget.reset();
+    status.textContent = "Personal de prueba agregado. La cuenta se perderá al recargar.";
+    await loadDashboard();
+    return;
+  }
+  if (!supabase) {
+    status.textContent = "Falta completar la configuración de Supabase.";
+    return;
+  }
+
+  button.disabled = true;
+  status.textContent = "Enviando invitación...";
+  const { error } = await supabase.functions.invoke("manage-staff", {
+    body: { action: "create", first_name: firstName, last_name: lastName, email, password }
+  });
+  button.disabled = false;
+
+  if (error) {
+    status.textContent = "No se pudo invitar al personal. Verifica tu acceso y la configuración de Supabase.";
+    return;
+  }
+
+  event.currentTarget.reset();
+  status.textContent = "Cuenta creada. Entrega la contraseña inicial por un canal seguro.";
+  await loadDashboard();
+});
+
+staffTable.addEventListener("click", async event => {
+  const toggleButton = event.target.closest("[data-toggle-staff]");
+  const deleteButton = event.target.closest("[data-delete-staff]");
+
+  if (toggleButton) {
+    const person = staff.find(item => item.id === toggleButton.dataset.toggleStaff);
+    if (!person || person.role !== "service") return;
+
+    if (demoMode) {
+      person.active = !person.active;
+      renderStaff();
+      return;
+    }
+    if (!supabase) return;
+
+    const { error } = await supabase.functions.invoke("manage-staff", {
+      body: { action: "set-active", user_id: person.id, active: !person.active }
+    });
+    if (error) byId("dashboard-status").textContent = "No se pudo cambiar el estado del personal.";
+    else await loadDashboard();
+  }
+
+  const personToDelete = staff.find(item => item.id === deleteButton?.dataset.deleteStaff);
+  if (deleteButton && personToDelete?.role === "service" && window.confirm(`¿Eliminar permanentemente a ${personToDelete.full_name}? También se quitará su asignación de los tickets. Esta acción no se puede deshacer.`)) {
+    if (demoMode) {
+      const deletedId = deleteButton.dataset.deleteStaff;
+      const index = demoStaff.findIndex(person => person.id === deletedId);
+      if (index >= 0) demoStaff.splice(index, 1);
+      demoTickets.forEach(ticket => {
+        if (ticket.agente_id === deletedId) ticket.agente_id = null;
+      });
+      await loadDashboard();
+      return;
+    }
+    if (!supabase) return;
+
+    const { error } = await supabase.functions.invoke("manage-staff", {
+      body: { action: "delete", user_id: deleteButton.dataset.deleteStaff }
+    });
+    if (error) byId("dashboard-status").textContent = "No se pudo eliminar la cuenta del personal.";
+    else await loadDashboard();
+  }
+});
+
+byId("filtro-texto").addEventListener("input", renderTickets);
+byId("filtro-categoria").addEventListener("change", renderTickets);
+document.querySelectorAll("[data-ticket-status]").forEach(button => {
+  button.addEventListener("click", () => {
+    ticketStatusFilter = button.dataset.ticketStatus;
+    renderTickets();
+  });
+});
+
+ticketsTable.addEventListener("change", async event => {
+  const ticketId = event.target.dataset.agentTicket;
+  if (!ticketId) return;
+  if (demoMode) {
+    const ticket = demoTickets.find(item => item.id === ticketId);
+    if (ticket) ticket.agente_id = event.target.value || null;
+    tickets = demoTickets;
+    renderTickets();
+    return;
+  }
+
+  const { error } = await supabase.from("tickets").update({ agente_id: event.target.value || null }).eq("id", ticketId);
+  if (error) byId("dashboard-status").textContent = "No se pudo actualizar la asignación.";
+  else await loadDashboard();
+});
+
+ticketsTable.addEventListener("click", async event => {
+  const toggleButton = event.target.closest("[data-toggle-ticket]");
+  const deleteButton = event.target.closest("[data-delete-ticket]");
+  const attachmentButton = event.target.closest("[data-download-attachment]");
+
+  if (attachmentButton) {
+    const ticket = tickets.find(item => item.id === attachmentButton.dataset.downloadAttachment);
+    if (!ticket?.archivo_path || !supabase) return;
+
+    byId("dashboard-status").textContent = "Preparando descarga del archivo...";
+    const { data, error } = await supabase.storage
+      .from(attachmentBucket)
+      .createSignedUrl(ticket.archivo_path, 60);
+    if (error) {
+      byId("dashboard-status").textContent = "No se pudo preparar la descarga del archivo adjunto.";
+      return;
+    }
+
+    try {
+      const response = await fetch(data.signedUrl);
+      if (!response.ok) {
+        byId("dashboard-status").textContent = "No se pudo descargar el archivo adjunto.";
+        return;
+      }
+      const downloadUrl = URL.createObjectURL(await response.blob());
+      const downloadLink = document.createElement("a");
+      downloadLink.href = downloadUrl;
+      downloadLink.download = ticket.archivo_nombre || "adjunto";
+      document.body.append(downloadLink);
+      downloadLink.click();
+      downloadLink.remove();
+      window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 60_000);
+      byId("dashboard-status").textContent = "";
+    } catch {
+      byId("dashboard-status").textContent = "No se pudo descargar el archivo adjunto. Revisa tu conexión e inténtalo de nuevo.";
+    }
+  }
+
+  if (toggleButton) {
+    const ticket = tickets.find(item => item.id === toggleButton.dataset.toggleTicket);
+    if (demoMode) {
+      ticket.estado = ticket.estado === "Pendiente" ? "Atendido" : "Pendiente";
+      tickets = demoTickets;
+      renderTickets();
+      return;
+    }
+
+    const { error } = await supabase.from("tickets").update({ estado: ticket.estado === "Pendiente" ? "Atendido" : "Pendiente" }).eq("id", ticket.id);
+    if (error) byId("dashboard-status").textContent = "No se pudo actualizar el estado.";
+    else await loadDashboard();
+  }
+
+  if (deleteButton && window.confirm("¿Eliminar este ticket definitivamente?")) {
+    if (demoMode) {
+      demoTickets = demoTickets.filter(item => item.id !== deleteButton.dataset.deleteTicket);
+      tickets = demoTickets;
+      renderTickets();
+      return;
+    }
+
+    const ticketToDelete = tickets.find(item => item.id === deleteButton.dataset.deleteTicket);
+    const { error } = await supabase.from("tickets").delete().eq("id", deleteButton.dataset.deleteTicket);
+    if (error) {
+      byId("dashboard-status").textContent = "No se pudo eliminar el ticket.";
+    } else {
+      const { error: attachmentError } = ticketToDelete?.archivo_path
+        ? await supabase.storage.from(attachmentBucket).remove([ticketToDelete.archivo_path])
+        : { error: null };
+      await loadDashboard();
+      if (attachmentError) byId("dashboard-status").textContent = "Ticket eliminado, pero no se pudo borrar su archivo adjunto.";
+    }
+  }
+});
+
+byId("exportar-csv").addEventListener("click", () => {
+  const columns = ["codigo", "tipo", "correo", "contacto", "amie", "nombre", "asunto", "archivo_nombre", "estado", "created_at"];
+  const rows = [columns.join(","), ...tickets.map(ticket => columns.map(column => {
+    const value = String(ticket[column] || "").replace(/"/g, '""');
+    return `"${value}"`;
+  }).join(","))];
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(new Blob([rows.join("\n")], { type: "text/csv;charset=utf-8" }));
+  link.download = `tickets_${new Date().toISOString().slice(0, 10)}.csv`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+});
+
+byId("ticket-success-close").addEventListener("click", () => byId("ticketSuccess").classList.add("hidden"));
+byId("ticketSuccess").addEventListener("click", event => {
+  if (event.target === event.currentTarget) event.currentTarget.classList.add("hidden");
+});
+
+if (supabase) {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session) await activateAdmin(session.user);
+  supabase.auth.onAuthStateChange(event => {
+    if (event === "SIGNED_OUT") showPublicView();
+  });
+}
+  </script>
+
+
+</body>
+</html>
